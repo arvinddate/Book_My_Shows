@@ -8,7 +8,7 @@ import TheatreRouter from './routes/theatreRouter.js';
 import BookinghRouter from './routes/bookingRoutes.js';
 
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import { dirname ,join} from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
