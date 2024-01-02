@@ -18,7 +18,7 @@ const app=express();
 app.use(express.json());
 app.use( cors());
 config();
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'Book_My_Shows/client/build')));
 app.use('/api/user',userRouter);
 app.use('/api/movie',MovieRoutes);
 app.use("/api/theatre",TheatreRouter );
