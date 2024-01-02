@@ -7,6 +7,11 @@ import MovieRoutes from './routes/movieRouter.js';
 import TheatreRouter from './routes/theatreRouter.js';
 import BookinghRouter from './routes/bookingRoutes.js';
 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 
 import cors from 'cors';
 const app=express();
