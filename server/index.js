@@ -6,12 +6,16 @@ import MovieRoutes from './routes/movieRouter.js';
 import TheatreRouter from './routes/theatreRouter.js';
 import BookinghRouter from './routes/bookingRoutes.js';
 
-
 import cors from 'cors';
 const app=express();
 app.use(express.json());
 app.use( cors());
 config();
+app.use('/', express.static('public'));
+
+app.use('*', (req, res) => {
+    res.status(400).send('Page not found!');
+});
 
 app.use('/api/user',userRouter);
 app.use('/api/movie',MovieRoutes);
