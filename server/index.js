@@ -5,7 +5,7 @@ import userRouter from './routes/userRoutes.js';
 import MovieRoutes from './routes/movieRouter.js';
 import TheatreRouter from './routes/theatreRouter.js';
 import BookinghRouter from './routes/bookingRoutes.js';
-
+import path from "path";
 import cors from 'cors';
 const app=express();
 app.use(express.json());
@@ -22,8 +22,8 @@ app.use("/api/bookings",BookinghRouter );
 
 app.use('/', express.static('public'));
 
-app.use('*', (req, res) => {
-    res.status(400).send('Page not found!');
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 app.listen(5050, async() => {
     await connectToDB()
