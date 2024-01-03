@@ -1,6 +1,6 @@
 import axios from 'axios';
 export const axiosInstance=axios.create({
-    baseURL:"http://localhost:5050",
+    baseURL:"https://book-my-show-k69e.onrender.com",
     headers:{
         withCredentials: true,
         method:"post",
