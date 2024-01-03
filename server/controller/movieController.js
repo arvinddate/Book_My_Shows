@@ -24,7 +24,7 @@ export const getAllMovies=async(request,response)=>{
     
     try {
         const movies = await Movies.find();
-        response.send({
+        response.status(200).send({
         success: true,
         message: "Movies Fetched Successfully",
         data: movies
